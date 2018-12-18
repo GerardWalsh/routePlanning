@@ -1,5 +1,5 @@
 # routePlanning
-To use simply use:
+To utilize the scripy simply use:
 $ python run.py
 
 # Notes
