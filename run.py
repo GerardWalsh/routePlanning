@@ -89,7 +89,7 @@ mapZoom = '&zoom=7&size=1280x920&maptype=roadmap'
 marker = '&markers=color:blue%7Clabel:'
 locationNumber = '%7C'
 path = '&path=color:blue|weight:5|'
-key = '&key=AIzaSyAgO_1n-Vb_copaVuGp-yq2y-zEBFXXLQQ'
+#key = '&key=AIzaSyAgO_1n-Vb_copaVuGp-yq2y-zEBFXXLQQ'
 
 newUrl = urlStart+center+mapZoom
 
@@ -97,7 +97,7 @@ newUrl = urlStart+center+mapZoom
 for j in range(0, (len(route)-1)):
 	newUrl = newUrl + marker + str(j+1) + locationNumber + coords(deliveryLocations[route[j]]) + path + coords(deliveryLocations[route[j]])+ '|'+ coords(deliveryLocations[route[j+1]])
 
-newUrl = newUrl +  marker + str(len(route)) + locationNumber+ coords(deliveryLocations[route[5]]) + key
+newUrl = newUrl +  marker + str(len(route)) + locationNumber+ coords(deliveryLocations[route[5]]) + userKey
 
 print "\nThe map is depicting the optimal route can be found at the following url: \n"
 print newUrl
